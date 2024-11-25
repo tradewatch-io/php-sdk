@@ -89,7 +89,7 @@ $apiInstance = new OpenAPI\Client\Api\AccountApi(
     $config
 );
 $limit = 56; // int
-$interval = new \OpenAPI\Client\Model\AccountUsageStatisticsInterval(); // AccountUsageStatisticsInterval
+$interval = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\AccountUsageStatisticsInterval(); // \OpenAPI\Client\Model\AccountUsageStatisticsInterval
 
 try {
     $result = $apiInstance->getUsage($limit, $interval);

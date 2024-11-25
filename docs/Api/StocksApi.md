@@ -176,9 +176,9 @@ $apiInstance = new OpenAPI\Client\Api\StocksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mode = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\SymbolsListMode(); // \OpenAPI\Client\Model\SymbolsListMode | Listing mode
+$mode = new \OpenAPI\Client\Model\SymbolsListMode(); // SymbolsListMode | Listing mode
 $size = 50; // int | Page offset
-$country = new \OpenAPI\Client\Model\Country(); // Country
+$country = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Country(); // \OpenAPI\Client\Model\Country
 $page = 1; // int | Page number
 $cursor = 'cursor_example'; // string | Cursor for the next page
 
@@ -194,9 +194,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mode** | [**\OpenAPI\Client\Model\SymbolsListMode**](../Model/.md)| Listing mode | |
+| **mode** | [**SymbolsListMode**](../Model/.md)| Listing mode | |
 | **size** | **int**| Page offset | [optional] [default to 50] |
-| **country** | [**Country**](../Model/.md)|  | [optional] |
+| **country** | [**\OpenAPI\Client\Model\Country**](../Model/.md)|  | [optional] |
 | **page** | **int**| Page number | [optional] [default to 1] |
 | **cursor** | **string**| Cursor for the next page | [optional] |
 
