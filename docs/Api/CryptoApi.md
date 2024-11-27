@@ -5,6 +5,7 @@ All URIs are relative to https://api.tradewatch.io, except if the operation defi
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**convert()**](CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion |
+| [**cryptoGetExchanges()**](CryptoApi.md#cryptoGetExchanges) | **GET** /crypto/exchanges | Available Exchanges |
 | [**getQuote()**](CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote |
 | [**getSymbols()**](CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols |
 
@@ -64,6 +65,70 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\CryptoConversion**](../Model/CryptoConversion.md)
+
+### Authorization
+
+[api_key_query](../../README.md#api_key_query), [api_key_header](../../README.md#api_key_header)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `cryptoGetExchanges()`
+
+```php
+cryptoGetExchanges(): \OpenAPI\Client\Model\CryptoExchangesList
+```
+
+Available Exchanges
+
+Get list of available cryptocurrency exchanges
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: api_key_query
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+// Configure API key authorization: api_key_header
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+
+$apiInstance = new OpenAPI\Client\Api\CryptoApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->cryptoGetExchanges();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CryptoApi->cryptoGetExchanges: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\CryptoExchangesList**](../Model/CryptoExchangesList.md)
 
 ### Authorization
 
