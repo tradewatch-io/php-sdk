@@ -111,7 +111,7 @@ Class | Method | HTTP request | Description
 *CommoditiesApi* | [**getSymbols**](docs/Api/CommoditiesApi.md#getsymbols) | **GET** /commodities/symbols | Available Symbols
 *CommoditiesApi* | [**getTypes**](docs/Api/CommoditiesApi.md#gettypes) | **GET** /commodities/types | Available Types
 *CryptoApi* | [**convert**](docs/Api/CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion
-*CryptoApi* | [**cryptoGetExchanges**](docs/Api/CryptoApi.md#cryptogetexchanges) | **GET** /crypto/exchanges | Available Exchanges
+*CryptoApi* | [**getExchanges**](docs/Api/CryptoApi.md#getexchanges) | **GET** /crypto/exchanges | Available Exchanges
 *CryptoApi* | [**getQuote**](docs/Api/CryptoApi.md#getquote) | **GET** /crypto/symbols/{symbol} | Last Quote
 *CryptoApi* | [**getSymbols**](docs/Api/CryptoApi.md#getsymbols) | **GET** /crypto/symbols | Available Symbols
 *CurrenciesApi* | [**convert**](docs/Api/CurrenciesApi.md#convert) | **GET** /currencies/convert/{from}/{to} | Conversion

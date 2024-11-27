@@ -60,7 +60,9 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'year_established' => 'int'
+        'year_established' => 'int',
+        'country' => 'string',
+        'website' => 'string'
     ];
 
     /**
@@ -73,7 +75,9 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'year_established' => null
+        'year_established' => null,
+        'country' => null,
+        'website' => null
     ];
 
     /**
@@ -84,7 +88,9 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static array $openAPINullables = [
         'id' => false,
         'name' => false,
-        'year_established' => false
+        'year_established' => false,
+        'country' => false,
+        'website' => false
     ];
 
     /**
@@ -175,7 +181,9 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'year_established' => 'year_established'
+        'year_established' => 'year_established',
+        'country' => 'country',
+        'website' => 'website'
     ];
 
     /**
@@ -186,7 +194,9 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'year_established' => 'setYearEstablished'
+        'year_established' => 'setYearEstablished',
+        'country' => 'setCountry',
+        'website' => 'setWebsite'
     ];
 
     /**
@@ -197,7 +207,9 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'year_established' => 'getYearEstablished'
+        'year_established' => 'getYearEstablished',
+        'country' => 'getCountry',
+        'website' => 'getWebsite'
     ];
 
     /**
@@ -260,6 +272,8 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('year_established', $data ?? [], null);
+        $this->setIfExists('country', $data ?? [], null);
+        $this->setIfExists('website', $data ?? [], null);
     }
 
     /**
@@ -297,6 +311,12 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
         }
         if ($this->container['year_established'] === null) {
             $invalidProperties[] = "'year_established' can't be null";
+        }
+        if ($this->container['country'] === null) {
+            $invalidProperties[] = "'country' can't be null";
+        }
+        if ($this->container['website'] === null) {
+            $invalidProperties[] = "'website' can't be null";
         }
         return $invalidProperties;
     }
@@ -390,6 +410,60 @@ class CryptoExchangeItem implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable year_established cannot be null');
         }
         $this->container['year_established'] = $year_established;
+
+        return $this;
+    }
+
+    /**
+     * Gets country
+     *
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->container['country'];
+    }
+
+    /**
+     * Sets country
+     *
+     * @param string $country Exchange country
+     *
+     * @return self
+     */
+    public function setCountry($country)
+    {
+        if (is_null($country)) {
+            throw new \InvalidArgumentException('non-nullable country cannot be null');
+        }
+        $this->container['country'] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Gets website
+     *
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->container['website'];
+    }
+
+    /**
+     * Sets website
+     *
+     * @param string $website Exchange website URL
+     *
+     * @return self
+     */
+    public function setWebsite($website)
+    {
+        if (is_null($website)) {
+            throw new \InvalidArgumentException('non-nullable website cannot be null');
+        }
+        $this->container['website'] = $website;
 
         return $this;
     }
