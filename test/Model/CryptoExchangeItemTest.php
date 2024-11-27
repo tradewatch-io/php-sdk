@@ -105,4 +105,22 @@ class CryptoExchangeItemTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "country"
+     */
+    public function testPropertyCountry()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "website"
+     */
+    public function testPropertyWebsite()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

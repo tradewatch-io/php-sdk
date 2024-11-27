@@ -84,12 +84,12 @@ class CryptoApiTest extends TestCase
     }
 
     /**
-     * Test case for cryptoGetExchanges
+     * Test case for getExchanges
      *
      * Available Exchanges.
      *
      */
-    public function testCryptoGetExchanges()
+    public function testGetExchanges()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

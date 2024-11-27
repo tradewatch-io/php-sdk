@@ -5,7 +5,7 @@ All URIs are relative to https://api.tradewatch.io, except if the operation defi
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**convert()**](CryptoApi.md#convert) | **GET** /crypto/convert/{from}/{to} | Conversion |
-| [**cryptoGetExchanges()**](CryptoApi.md#cryptoGetExchanges) | **GET** /crypto/exchanges | Available Exchanges |
+| [**getExchanges()**](CryptoApi.md#getExchanges) | **GET** /crypto/exchanges | Available Exchanges |
 | [**getQuote()**](CryptoApi.md#getQuote) | **GET** /crypto/symbols/{symbol} | Last Quote |
 | [**getSymbols()**](CryptoApi.md#getSymbols) | **GET** /crypto/symbols | Available Symbols |
 
@@ -79,10 +79,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `cryptoGetExchanges()`
+## `getExchanges()`
 
 ```php
-cryptoGetExchanges(): \OpenAPI\Client\Model\CryptoExchangesList
+getExchanges(): \OpenAPI\Client\Model\CryptoExchangesList
 ```
 
 Available Exchanges
@@ -115,10 +115,10 @@ $apiInstance = new OpenAPI\Client\Api\CryptoApi(
 );
 
 try {
-    $result = $apiInstance->cryptoGetExchanges();
+    $result = $apiInstance->getExchanges();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CryptoApi->cryptoGetExchanges: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CryptoApi->getExchanges: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

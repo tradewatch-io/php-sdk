@@ -74,7 +74,7 @@ class CryptoApi
         'convert' => [
             'application/json',
         ],
-        'cryptoGetExchanges' => [
+        'getExchanges' => [
             'application/json',
         ],
         'getQuote' => [
@@ -505,36 +505,36 @@ class CryptoApi
     }
 
     /**
-     * Operation cryptoGetExchanges
+     * Operation getExchanges
      *
      * Available Exchanges
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cryptoGetExchanges'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExchanges'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\CryptoExchangesList
      */
-    public function cryptoGetExchanges(string $contentType = self::contentTypes['cryptoGetExchanges'][0])
+    public function getExchanges(string $contentType = self::contentTypes['getExchanges'][0])
     {
-        list($response) = $this->cryptoGetExchangesWithHttpInfo($contentType);
+        list($response) = $this->getExchangesWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation cryptoGetExchangesWithHttpInfo
+     * Operation getExchangesWithHttpInfo
      *
      * Available Exchanges
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cryptoGetExchanges'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExchanges'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\CryptoExchangesList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cryptoGetExchangesWithHttpInfo(string $contentType = self::contentTypes['cryptoGetExchanges'][0])
+    public function getExchangesWithHttpInfo(string $contentType = self::contentTypes['getExchanges'][0])
     {
-        $request = $this->cryptoGetExchangesRequest($contentType);
+        $request = $this->getExchangesRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -646,18 +646,18 @@ class CryptoApi
     }
 
     /**
-     * Operation cryptoGetExchangesAsync
+     * Operation getExchangesAsync
      *
      * Available Exchanges
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cryptoGetExchanges'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExchanges'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cryptoGetExchangesAsync(string $contentType = self::contentTypes['cryptoGetExchanges'][0])
+    public function getExchangesAsync(string $contentType = self::contentTypes['getExchanges'][0])
     {
-        return $this->cryptoGetExchangesAsyncWithHttpInfo($contentType)
+        return $this->getExchangesAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -666,19 +666,19 @@ class CryptoApi
     }
 
     /**
-     * Operation cryptoGetExchangesAsyncWithHttpInfo
+     * Operation getExchangesAsyncWithHttpInfo
      *
      * Available Exchanges
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cryptoGetExchanges'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExchanges'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cryptoGetExchangesAsyncWithHttpInfo(string $contentType = self::contentTypes['cryptoGetExchanges'][0])
+    public function getExchangesAsyncWithHttpInfo(string $contentType = self::contentTypes['getExchanges'][0])
     {
         $returnType = '\OpenAPI\Client\Model\CryptoExchangesList';
-        $request = $this->cryptoGetExchangesRequest($contentType);
+        $request = $this->getExchangesRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -717,14 +717,14 @@ class CryptoApi
     }
 
     /**
-     * Create request for operation 'cryptoGetExchanges'
+     * Create request for operation 'getExchanges'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cryptoGetExchanges'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExchanges'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function cryptoGetExchangesRequest(string $contentType = self::contentTypes['cryptoGetExchanges'][0])
+    public function getExchangesRequest(string $contentType = self::contentTypes['getExchanges'][0])
     {
 
 
