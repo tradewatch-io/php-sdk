@@ -1,0 +1,31 @@
+<?php
+
+namespace Tradewatch\Indices\Requests;
+
+use Tradewatch\Core\Json\JsonSerializableType;
+
+class IndicesGetQuoteRequest extends JsonSerializableType
+{
+    /**
+     * @var string $symbol The symbol to get the quote for.
+     */
+    public string $symbol;
+
+    /**
+     * @var ?int $precision The decimal precision of the result.
+     */
+    public ?int $precision;
+
+    /**
+     * @param array{
+     *   symbol: string,
+     *   precision?: ?int,
+     * } $values
+     */
+    public function __construct(
+        array $values,
+    ) {
+        $this->symbol = $values['symbol'];
+        $this->precision = $values['precision'] ?? null;
+    }
+}
